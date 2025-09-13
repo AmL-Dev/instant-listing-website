@@ -106,26 +106,19 @@ export default function TermsPage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">Support</h3>
-              <ul className="space-y-3">
-                <li><a href="/#contact" className="text-text-muted hover:text-primary transition-colors">Contact Us</a></li>
+              <h4 className="font-semibold text-foreground mb-4">Support</h4>
+              <ul className="space-y-2">
+                <li><a href="mailto:contact.aimtechnologies@gmail.com" className="text-text-muted hover:text-primary transition-colors">Contact Us</a></li>
                 <li><a href="/privacy" className="text-text-muted hover:text-primary transition-colors">Privacy Policy</a></li>
                 <li><a href="/terms" className="text-text-muted hover:text-primary transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="text-text-muted hover:text-primary transition-colors">Help Center</a></li>
               </ul>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t border-border">
-            <div className="flex flex-col sm:flex-row justify-between items-center">
-              <p className="text-text-muted text-sm">
-                © 2025 Instant Listing. All rights reserved.
-              </p>
-              <div className="flex space-x-6 mt-4 sm:mt-0">
-                <a href="/privacy" className="text-text-muted hover:text-primary transition-colors text-sm">Privacy Policy</a>
-                <a href="/terms" className="text-text-muted hover:text-primary transition-colors text-sm">Terms of Service</a>
-                <a href="#" className="text-text-muted hover:text-primary transition-colors text-sm">Cookie Policy</a>
-              </div>
-            </div>
+          
+          <div className="border-t border-border mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center">
+            <p className="text-text-muted text-sm">
+              © 2025 Instant Listing. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
