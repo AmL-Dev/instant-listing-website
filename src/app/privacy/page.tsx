@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import fs from 'fs'
 import path from 'path'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: "Privacy Policy - Instant Listing",
@@ -21,9 +22,11 @@ export default function PrivacyPage() {
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
               <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-                <img 
+                <Image 
                   src="/Instant_Listing_Logo.png" 
                   alt="Instant Listing" 
+                  width={32}
+                  height={32}
                   className="h-8 w-auto"
                 />
               </Link>
@@ -68,9 +71,11 @@ export default function PrivacyPage() {
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center mb-4">
                 <a href="/" className="flex items-center hover:opacity-80 transition-opacity">
-                  <img 
+                  <Image 
                     src="/Instant_Listing_Logo.png" 
                     alt="Instant Listing" 
+                    width={32}
+                    height={32}
                     className="h-8 w-auto"
                   />
                 </a>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -9,9 +10,11 @@ export default function Home() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Link href="/" className="flex-shrink-0 flex items-center space-x-3 hover:opacity-80 transition-opacity">
-                <img 
+                <Image 
                   src="/Instant_Listing_Logo.png" 
                   alt="Instant Listing Logo" 
+                  width={32}
+                  height={32}
                   className="h-8 w-auto"
                 />
                 <h1 className="text-2xl font-bold gradient-text">Instant Listing</h1>
@@ -27,9 +30,11 @@ export default function Home() {
             </div>
             <div className="flex items-center space-x-4">
               <a href="https://apps.apple.com/app/instant-listing" target="_blank" rel="noopener noreferrer">
-                <img 
+                <Image 
                   src="/Download_on_the_App_Store_Badge.svg.png" 
                   alt="Download on the App Store" 
+                  width={200}
+                  height={64}
                   className="h-12 w-auto hover:opacity-90 transition-opacity"
                 />
               </a>
@@ -59,9 +64,11 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8 animate-slide-up">
                 <a href="https://apps.apple.com/app/instant-listing" target="_blank" rel="noopener noreferrer">
-                  <img 
+                  <Image 
                     src="/Download_on_the_App_Store_Badge.svg.png" 
                     alt="Download on the App Store" 
+                    width={200}
+                    height={64}
                     className="h-16 w-auto hover:opacity-90 transition-opacity"
                   />
                 </a>
@@ -96,9 +103,11 @@ export default function Home() {
               <div className="relative mx-auto max-w-md h-96 flex items-center justify-center">
                 {/* Main Phone - Centered and smaller with floating animation */}
                 <div className="relative z-20 animate-float">
-                  <img 
+                  <Image 
                     src="/phone_specs_description.png" 
                     alt="Instant Listing App - Generate listing screen" 
+                    width={256}
+                    height={512}
                     className="w-64 h-auto drop-shadow-2xl"
                     style={{
                       background: 'transparent'
@@ -110,45 +119,55 @@ export default function Home() {
                 
                 {/* MacBook Air - Top Right (Primary) */}
                 <div className="absolute -top-2 -right-4 z-30 transform rotate-8 hover:rotate-4 transition-all duration-500 hover:scale-105 animate-float-delayed-1">
-                  <img 
+                  <Image 
                     src="/Listing (4).png" 
                     alt="Generated listing example - MacBook Air" 
+                    width={144}
+                    height={256}
                     className="w-36 h-auto drop-shadow-2xl"
                   />
                 </div>
 
                 {/* Nike Sneakers - Top Left (Secondary) */}
                 <div className="absolute -top-6 -left-8 z-25 transform -rotate-6 hover:-rotate-3 transition-all duration-500 hover:scale-105 animate-float-delayed-2">
-                  <img 
+                  <Image 
                     src="/Listing (2).png" 
                     alt="Generated listing example - Nike Sneakers" 
+                    width={128}
+                    height={256}
                     className="w-32 h-auto drop-shadow-xl"
                   />
                 </div>
 
                 {/* LEGO DeLorean - Bottom Left (Tertiary) */}
                 <div className="absolute bottom-20 -left-6 z-10 transform -rotate-2 scale-75 blur-sm hover:blur-none hover:scale-85 hover:rotate-1 transition-all duration-500 animate-float-delayed-3">
-                  <img 
+                  <Image 
                     src="/Listing (3).png" 
                     alt="Generated listing example - LEGO DeLorean" 
+                    width={112}
+                    height={256}
                     className="w-28 h-auto drop-shadow-lg"
                   />
                 </div>
 
                 {/* Burberry Handbag - Bottom Right (Secondary) */}
                 <div className="absolute bottom-2 -right-8 z-15 transform rotate-12 hover:rotate-6 transition-all duration-500 hover:scale-105 animate-float-delayed-4">
-                  <img 
+                  <Image 
                     src="/Listing (1).png" 
                     alt="Generated listing example - Burberry Handbag" 
+                    width={120}
+                    height={256}
                     className="w-30 h-auto drop-shadow-xl"
                   />
                 </div>
 
                 {/* Additional Listing - Top Center (Tertiary) */}
                 <div className="absolute top-70 right-85 z-25 transform -rotate-18 hover:-rotate-10 transition-all duration-500 hover:scale-105 animate-float-delayed-2">
-                  <img 
+                  <Image 
                     src="/Listing.png" 
                     alt="Generated listing example" 
+                    width={120}
+                    height={256}
                     className="w-30 h-auto drop-shadow-lg"
                   />
                 </div>
@@ -332,9 +351,11 @@ export default function Home() {
           </p>
           <div className="flex justify-center">
             <a href="https://apps.apple.com/app/instant-listing" target="_blank" rel="noopener noreferrer">
-              <img 
+              <Image 
                 src="/Download_on_the_App_Store_Badge.svg.png" 
                 alt="Download on the App Store" 
+                width={200}
+                height={64}
                 className="h-16 w-auto hover:opacity-90 transition-opacity"
               />
             </a>
