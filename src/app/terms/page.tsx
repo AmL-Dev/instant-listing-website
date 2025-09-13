@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import fs from 'fs'
 import path from 'path'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: "Terms of Service - Instant Listing",
@@ -19,19 +20,19 @@ export default function TermsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
-              <a href="/" className="flex items-center hover:opacity-80 transition-opacity">
+              <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
                 <img 
                   src="/Instant_Listing_Logo.png" 
                   alt="Instant Listing" 
                   className="h-8 w-auto"
                 />
-              </a>
+              </Link>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="/" className="text-text-muted hover:text-primary transition-colors">Home</a>
-              <a href="/#features" className="text-text-muted hover:text-primary transition-colors">Features</a>
-              <a href="/#demo" className="text-text-muted hover:text-primary transition-colors">Demo</a>
-              <a href="/#contact" className="text-text-muted hover:text-primary transition-colors">Contact</a>
+              <Link href="/" className="text-text-muted hover:text-primary transition-colors">Home</Link>
+              <Link href="/#features" className="text-text-muted hover:text-primary transition-colors">Features</Link>
+              <Link href="/#demo" className="text-text-muted hover:text-primary transition-colors">Demo</Link>
+              <Link href="/#contact" className="text-text-muted hover:text-primary transition-colors">Contact</Link>
             </nav>
           </div>
         </div>
@@ -99,8 +100,8 @@ export default function TermsPage() {
             <div>
               <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">Product</h3>
               <ul className="space-y-3">
-                <li><a href="/#features" className="text-text-muted hover:text-primary transition-colors">Features</a></li>
-                <li><a href="/#demo" className="text-text-muted hover:text-primary transition-colors">Demo</a></li>
+                <li><Link href="/#features" className="text-text-muted hover:text-primary transition-colors">Features</Link></li>
+                <li><Link href="/#demo" className="text-text-muted hover:text-primary transition-colors">Demo</Link></li>
                 <li><a href="#" className="text-text-muted hover:text-primary transition-colors">Pricing</a></li>
                 <li><a href="#" className="text-text-muted hover:text-primary transition-colors">Download</a></li>
               </ul>
@@ -109,8 +110,8 @@ export default function TermsPage() {
               <h4 className="font-semibold text-foreground mb-4">Support</h4>
               <ul className="space-y-2">
                 <li><a href="mailto:contact.aimtechnologies@gmail.com" className="text-text-muted hover:text-primary transition-colors">Contact Us</a></li>
-                <li><a href="/privacy" className="text-text-muted hover:text-primary transition-colors">Privacy Policy</a></li>
-                <li><a href="/terms" className="text-text-muted hover:text-primary transition-colors">Terms of Service</a></li>
+                <li><Link href="/privacy" className="text-text-muted hover:text-primary transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/terms" className="text-text-muted hover:text-primary transition-colors">Terms of Service</Link></li>
               </ul>
             </div>
           </div>

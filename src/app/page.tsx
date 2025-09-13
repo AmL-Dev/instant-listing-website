@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -8,21 +8,21 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <a href="/" className="flex-shrink-0 flex items-center space-x-3 hover:opacity-80 transition-opacity">
+              <Link href="/" className="flex-shrink-0 flex items-center space-x-3 hover:opacity-80 transition-opacity">
                 <img 
                   src="/Instant_Listing_Logo.png" 
                   alt="Instant Listing Logo" 
                   className="h-8 w-auto"
                 />
                 <h1 className="text-2xl font-bold gradient-text">Instant Listing</h1>
-              </a>
+              </Link>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
-                <a href="#features" className="text-foreground hover:text-primary transition-colors">Features</a>
-                <a href="#demo" className="text-foreground hover:text-primary transition-colors">Demo</a>
-                <a href="#screenshots" className="text-foreground hover:text-primary transition-colors">How It Works</a>
-                <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
+                <Link href="#features" className="text-foreground hover:text-primary transition-colors">Features</Link>
+                <Link href="#demo" className="text-foreground hover:text-primary transition-colors">Demo</Link>
+                <Link href="#screenshots" className="text-foreground hover:text-primary transition-colors">How It Works</Link>
+                <Link href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</Link>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -65,9 +65,9 @@ export default function Home() {
                     className="h-16 w-auto hover:opacity-90 transition-opacity"
                   />
                 </a>
-                <a href="#demo" className="border-2 border-primary text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary hover:text-white transition-all inline-block text-center">
+                <Link href="#demo" className="border-2 border-primary text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary hover:text-white transition-all inline-block text-center">
                   Watch Demo
-                </a>
+                </Link>
               </div>
               <div className="flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-text-muted animate-slide-up">
                 <div className="flex items-center">
@@ -373,9 +373,9 @@ export default function Home() {
             <div>
               <h4 className="font-semibold text-foreground mb-4">App</h4>
               <ul className="space-y-2">
-                <li><a href="#features" className="text-text-muted hover:text-primary transition-colors">Features</a></li>
-                <li><a href="#demo" className="text-text-muted hover:text-primary transition-colors">Demo</a></li>
-                <li><a href="#screenshots" className="text-text-muted hover:text-primary transition-colors">How It Works</a></li>
+                <li><Link href="#features" className="text-text-muted hover:text-primary transition-colors">Features</Link></li>
+                <li><Link href="#demo" className="text-text-muted hover:text-primary transition-colors">Demo</Link></li>
+                <li><Link href="#screenshots" className="text-text-muted hover:text-primary transition-colors">How It Works</Link></li>
                 <li><a href="https://apps.apple.com/app/instant-listing" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">Download</a></li>
               </ul>
             </div>
@@ -384,8 +384,8 @@ export default function Home() {
               <h4 className="font-semibold text-foreground mb-4">Support</h4>
               <ul className="space-y-2">
                 <li><a href="mailto:contact.aimtechnologies@gmail.com" className="text-text-muted hover:text-primary transition-colors">Contact Us</a></li>
-                <li><a href="/privacy" className="text-text-muted hover:text-primary transition-colors">Privacy Policy</a></li>
-                <li><a href="/terms" className="text-text-muted hover:text-primary transition-colors">Terms of Service</a></li>
+                <li><Link href="/privacy" className="text-text-muted hover:text-primary transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/terms" className="text-text-muted hover:text-primary transition-colors">Terms of Service</Link></li>
               </ul>
             </div>
           </div>
