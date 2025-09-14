@@ -3,14 +3,14 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Link href="/" className="flex-shrink-0 flex items-center space-x-3 hover:opacity-80 transition-opacity">
-                <Image 
+        <Image
                   src="/Instant_Listing_Logo.png" 
                   alt="Instant Listing Logo" 
                   width={32}
@@ -28,16 +28,19 @@ export default function Home() {
                 <Link href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</Link>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
-              <a href="https://apps.apple.com/app/instant-listing" target="_blank" rel="noopener noreferrer">
-                <Image 
-                  src="/Download_on_the_App_Store_Badge.svg.png" 
-                  alt="Download on the App Store" 
-                  width={200}
-                  height={64}
-                  className="h-12 w-auto hover:opacity-90 transition-opacity"
-                />
-              </a>
+            
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button
+                type="button"
+                className="text-foreground hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 p-2"
+                aria-expanded="false"
+              >
+                <span className="sr-only">Open main menu</span>
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -52,19 +55,19 @@ export default function Home() {
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-semibold mb-6 animate-fade-in">
                 🚀 AI-Powered Product Listings
               </div>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-foreground mb-4 animate-fade-in">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-foreground mb-4 animate-fade-in">
                 <span className="gradient-text">Scan, Snap, Sell</span>
               </h1>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-600 dark:text-gray-300 mb-6 animate-fade-in">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-600 dark:text-gray-300 mb-6 animate-fade-in">
                 Turn Photos Into Product Listings Instantly
               </h2>
-              <p className="text-xl sm:text-2xl text-text-muted mb-8 animate-slide-up leading-relaxed">
+              <p className="text-lg sm:text-xl lg:text-2xl text-text-muted mb-8 animate-slide-up leading-relaxed">
                 Take a photo, and let AI do the rest! Create professional, SEO-optimized product listings instantly for eBay and more. 
                 <span className="font-bold text-primary"> Stop typing. Start selling.</span>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8 animate-slide-up">
                 <a href="https://apps.apple.com/app/instant-listing" target="_blank" rel="noopener noreferrer">
-                  <Image 
+          <Image
                     src="/Download_on_the_App_Store_Badge.svg.png" 
                     alt="Download on the App Store" 
                     width={200}
@@ -100,7 +103,7 @@ export default function Home() {
 
             {/* Right Column - Floating App Screenshots */}
             <div className="relative animate-slide-up">
-              <div className="relative mx-auto max-w-md h-96 flex items-center justify-center">
+              <div className="relative mx-auto max-w-sm sm:max-w-md h-80 sm:h-96 flex items-center justify-center">
                 {/* Main Phone - Centered and smaller with floating animation */}
                 <div className="relative z-20 animate-float">
                   <Image 
@@ -108,7 +111,7 @@ export default function Home() {
                     alt="Instant Listing App - Generate listing screen" 
                     width={256}
                     height={512}
-                    className="w-64 h-auto drop-shadow-2xl"
+                    className="w-48 sm:w-56 lg:w-64 h-auto drop-shadow-2xl"
                     style={{
                       background: 'transparent'
                     }}
@@ -118,57 +121,57 @@ export default function Home() {
                 {/* Floating Listing Cards with Balanced Distribution */}
                 
                 {/* MacBook Air - Top Right (Primary) */}
-                <div className="absolute -top-2 -right-4 z-30 transform rotate-8 hover:rotate-4 transition-all duration-500 hover:scale-105 animate-float-delayed-1">
+                <div className="absolute -top-2 -right-2 sm:-top-2 sm:-right-4 z-30 transform rotate-8 hover:rotate-4 transition-all duration-500 hover:scale-105 animate-float-delayed-1">
                   <Image 
                     src="/Listing (4).png" 
                     alt="Generated listing example - MacBook Air" 
                     width={144}
                     height={256}
-                    className="w-36 h-auto drop-shadow-2xl"
+                    className="w-24 sm:w-32 lg:w-36 h-auto drop-shadow-2xl"
                   />
                 </div>
 
                 {/* Nike Sneakers - Top Left (Secondary) */}
-                <div className="absolute -top-6 -left-8 z-25 transform -rotate-6 hover:-rotate-3 transition-all duration-500 hover:scale-105 animate-float-delayed-2">
+                <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-8 z-25 transform -rotate-6 hover:-rotate-3 transition-all duration-500 hover:scale-105 animate-float-delayed-2">
                   <Image 
                     src="/Listing (2).png" 
                     alt="Generated listing example - Nike Sneakers" 
                     width={128}
                     height={256}
-                    className="w-32 h-auto drop-shadow-xl"
+                    className="w-20 sm:w-28 lg:w-32 h-auto drop-shadow-xl"
                   />
                 </div>
 
                 {/* LEGO DeLorean - Bottom Left (Tertiary) */}
-                <div className="absolute bottom-20 -left-6 z-10 transform -rotate-2 scale-75 blur-sm hover:blur-none hover:scale-85 hover:rotate-1 transition-all duration-500 animate-float-delayed-3">
+                <div className="absolute bottom-30 sm:bottom-30 -left-3 sm:-left-2 z-10 transform -rotate-15 blur-sm hover:blur-none hover:scale-85 hover:rotate-1 transition-all duration-500 animate-float-delayed-3">
                   <Image 
                     src="/Listing (3).png" 
                     alt="Generated listing example - LEGO DeLorean" 
                     width={112}
                     height={256}
-                    className="w-28 h-auto drop-shadow-lg"
+                    className="w-20 sm:w-24 lg:w-24 h-auto drop-shadow-lg"
                   />
                 </div>
 
                 {/* Burberry Handbag - Bottom Right (Secondary) */}
-                <div className="absolute bottom-2 -right-8 z-15 transform rotate-12 hover:rotate-6 transition-all duration-500 hover:scale-105 animate-float-delayed-4">
+                <div className="absolute bottom-2 -right-2 sm:-right-4 z-15 transform rotate-12 hover:rotate-6 transition-all duration-500 hover:scale-105 animate-float-delayed-4">
                   <Image 
                     src="/Listing (1).png" 
                     alt="Generated listing example - Burberry Handbag" 
                     width={120}
                     height={256}
-                    className="w-30 h-auto drop-shadow-xl"
+                    className="w-24 sm:w-28 lg:w-30 h-auto drop-shadow-xl"
                   />
                 </div>
 
-                {/* Additional Listing - Top Center (Tertiary) */}
-                <div className="absolute top-70 right-85 z-25 transform -rotate-18 hover:-rotate-10 transition-all duration-500 hover:scale-105 animate-float-delayed-2">
-                  <Image 
+                {/* Additional Listing - Bottom Left (Tertiary) */}
+                <div className="absolute bottom-1 sm:bottom-1 -left-2 sm:-left-4 z-25 transform -rotate-2 hover:-rotate-1 transition-all duration-500 hover:scale-105 animate-float-delayed-2">
+          <Image
                     src="/Listing.png" 
                     alt="Generated listing example" 
                     width={120}
                     height={256}
-                    className="w-30 h-auto drop-shadow-lg"
+                    className="w-28 sm:w-30 lg:w-30 h-auto drop-shadow-lg"
                   />
                 </div>
 
@@ -351,7 +354,7 @@ export default function Home() {
           </p>
           <div className="flex justify-center">
             <a href="https://apps.apple.com/app/instant-listing" target="_blank" rel="noopener noreferrer">
-              <Image 
+          <Image
                 src="/Download_on_the_App_Store_Badge.svg.png" 
                 alt="Download on the App Store" 
                 width={200}
