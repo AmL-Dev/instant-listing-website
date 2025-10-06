@@ -15,6 +15,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Instant Listing - Scan, Snap, Sell with AI",
   description: "Turn photos into perfect product listings instantly! Create AI-powered listings in seconds for eBay, Etsy, Facebook Marketplace and more. Download the app today!",
+  icons: {
+    icon: [
+      { url: '/Instant_Listing_Logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: '16x16 32x32', type: 'image/x-icon' }
+    ],
+    apple: '/Instant_Listing_Logo.png',
+  },
 };
 
 export default function RootLayout({
@@ -24,9 +31,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/Instant_Listing_Logo.png" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
