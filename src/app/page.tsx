@@ -66,7 +66,7 @@ export default function Home() {
                 <span className="font-bold text-primary"> Stop typing. Start selling.</span>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8 animate-slide-up">
-                <a href="https://apps.apple.com/app/instant-listing" target="_blank" rel="noopener noreferrer">
+                <a href="https://apps.apple.com/app/instant-listing/id6739451358" target="_blank" rel="noopener noreferrer">
           <Image
                     src="/Download_on_the_App_Store_Badge.svg.png" 
                     alt="Download on the App Store" 
